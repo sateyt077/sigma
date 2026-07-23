@@ -1,0 +1,21 @@
+.shell {
+  min-height: 100vh;
+  background: var(--color-bg);
+}
+
+.topFade {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 90;
+  height: var(--top-fade-height);
+  pointer-events: none;
+  background: linear-gradient(
+    to bottom,
+    #010101 0%,
+    rgba(1, 1, 1, 0.72) 42%,
+    rgba(1, 1, 1, 0.28) 72%,
+    rgba(1, 1, 1, 0) 100%
+  );
+}

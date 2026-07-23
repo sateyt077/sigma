@@ -1,0 +1,60 @@
+.contact {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 100%;
+  max-width: var(--page-width);
+  margin: 0 auto;
+  padding: 80px var(--page-padding-x);
+  background: var(--color-bg);
+}
+
+.aside {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  width: 476px;
+  flex-shrink: 0;
+}
+
+.title {
+  margin: 0;
+  width: 100%;
+  font-family: var(--font-display);
+  font-size: var(--font-size-hero);
+  font-weight: 500;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -1.92px;
+  color: var(--color-white);
+  font-synthesis: none;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 636px;
+  flex-shrink: 0;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px 16px;
+  width: 100%;
+}
+
+.bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 41px;
+  width: 100%;
+}
+
+.submit {
+  width: 168px;
+  min-width: 168px;
+}

@@ -1,0 +1,48 @@
+.reveal {
+  opacity: 0;
+  transform: translate3d(0, 56px, 0) scale(0.985);
+  filter: blur(6px);
+  transition:
+    opacity var(--reveal-duration) var(--reveal-ease),
+    transform var(--reveal-duration) var(--reveal-ease),
+    filter var(--reveal-duration) var(--reveal-ease);
+  transition-delay: var(--reveal-delay, 0s);
+  will-change: opacity, transform, filter;
+}
+
+.visible {
+  opacity: 1;
+  transform: translate3d(0, 0, 0) scale(1);
+  filter: blur(0);
+}
+
+/* Page-load entrance — same timing as header, no upward jump under nav */
+.revealMount {
+  opacity: 0;
+  transform: translate3d(0, 16px, 0);
+  filter: blur(4px);
+  will-change: opacity, transform, filter;
+  animation: mountIn var(--intro-header-duration) var(--intro-ease) forwards;
+  animation-delay: var(--reveal-delay, 0s);
+}
+
+@keyframes mountIn {
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+    filter: blur(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal,
+  .visible,
+  .revealMount {
+    opacity: 1;
+    transform: none;
+    filter: none;
+    transition: none;
+    animation: none;
+    will-change: auto;
+  }
+}

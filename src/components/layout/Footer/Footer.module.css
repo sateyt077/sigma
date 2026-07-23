@@ -1,0 +1,149 @@
+.footer {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  background: var(--color-bg);
+}
+
+.background {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.background img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  object-fit: cover;
+  object-position: center bottom;
+}
+
+.inner {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  gap: 120px;
+  align-items: flex-start;
+  width: 100%;
+  max-width: var(--page-width);
+  margin: 0 auto;
+  padding: 138px var(--page-padding-x) 160px;
+}
+
+.brand {
+  display: flex;
+  flex: 1 0 0;
+  flex-direction: column;
+  gap: 56px;
+  align-items: flex-start;
+  min-width: 0;
+}
+
+.brandText {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.tagline {
+  margin: 0;
+  width: 100%;
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.45;
+  letter-spacing: -0.09px;
+  color: var(--color-white);
+  opacity: 0.5;
+  font-synthesis: none;
+}
+
+.socials {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+}
+
+.socialLink {
+  display: block;
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  opacity: 1;
+  transition: opacity 0.2s ease;
+}
+
+.socialLink img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.socialLink:hover {
+  opacity: 0.7;
+}
+
+.nav {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+  flex-shrink: 0;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: flex-start;
+  justify-content: center;
+  width: 130px;
+}
+
+.columnTitle {
+  margin: 0;
+  padding-bottom: 16px;
+  font-family: var(--font-display);
+  font-size: 20px;
+  font-weight: 500;
+  font-style: normal;
+  line-height: 1.45;
+  letter-spacing: -0.1px;
+  color: var(--color-white);
+  white-space: nowrap;
+  font-synthesis: none;
+}
+
+.columnList {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+}
+
+.columnLink {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.45;
+  letter-spacing: -0.09px;
+  color: var(--color-white);
+  opacity: 0.5;
+  transition: opacity 0.2s ease;
+  font-synthesis: none;
+}
+
+.columnLink:hover {
+  opacity: 1;
+}

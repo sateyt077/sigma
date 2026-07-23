@@ -1,0 +1,56 @@
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.label {
+  width: 100%;
+  font-family: var(--font-display);
+  font-size: 20px;
+  font-weight: 500;
+  font-style: normal;
+  line-height: 1.45;
+  letter-spacing: -0.1px;
+  color: var(--color-white);
+  font-synthesis: none;
+}
+
+.control {
+  width: 100%;
+  border: 2px solid rgba(255, 255, 255, 0.08);
+  border-radius: 32px;
+  background: #121212;
+  color: var(--color-white);
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.45;
+  letter-spacing: -0.09px;
+  outline: none;
+  transition: border-color 0.2s ease;
+  font-synthesis: none;
+}
+
+.control::placeholder {
+  color: var(--color-white);
+  opacity: 0.5;
+}
+
+.control:focus {
+  border-color: rgba(181, 223, 255, 0.35);
+}
+
+.input {
+  height: 59px;
+  padding: 0 14px;
+}
+
+.textarea {
+  height: 134px;
+  padding: 13px 14px;
+  resize: none;
+}

@@ -1,0 +1,80 @@
+.about {
+  display: flex;
+  flex-direction: column;
+  gap: 44px;
+  width: 100%;
+  max-width: var(--page-width);
+  margin: 0 auto;
+  padding: 80px var(--page-padding-x);
+  background: var(--color-bg);
+}
+
+.header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.titleBlock {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  width: 476px;
+}
+
+.titles {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  font-family: var(--font-display);
+  font-size: var(--font-size-hero);
+  font-weight: 500;
+  letter-spacing: -1.92px;
+  line-height: normal;
+  color: var(--color-white);
+  font-synthesis: none;
+}
+
+.title {
+  margin: 0;
+  font: inherit;
+}
+
+.subtitle {
+  margin: 0;
+  font: inherit;
+  opacity: 0.5;
+  white-space: nowrap;
+}
+
+.grid {
+  position: relative;
+  width: 100%;
+  height: 698px;
+}
+
+.contracts {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.delivery {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.warranty {
+  position: absolute;
+  top: 357px;
+  left: 0;
+}
+
+.experience {
+  position: absolute;
+  top: 357px;
+  right: 0;
+}

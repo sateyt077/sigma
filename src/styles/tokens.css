@@ -1,0 +1,46 @@
+:root {
+  /* Colors */
+  --color-bg: #010101;
+  --color-white: #ffffff;
+  --color-accent: #b5dfff;
+  --color-accent-border: #b7e0ff;
+  --color-accent-text: #052842;
+  --color-text-muted: rgba(255, 255, 255, 0.52);
+  --color-text-soft: rgba(255, 255, 255, 0.8);
+  --color-glass: rgba(255, 255, 255, 0.12);
+  --color-glass-border: rgba(255, 255, 255, 0.08);
+
+  /* Typography */
+  --font-display: 'VelaSansWeb', system-ui, sans-serif;
+  --font-ui: 'Inter', system-ui, sans-serif;
+  --font-size-s: 16px;
+  --font-size-nav: 18px;
+  --font-size-body: 24px;
+  --font-size-hero: 48px;
+
+  /* Layout */
+  --page-width: 1440px;
+  --content-width: 1336px;
+  --page-padding-x: 52px;
+  --hero-height: 920px;
+  --header-offset: 28px;
+  --header-height: 56px;
+  --header-total: 84px;
+  --top-fade-height: 160px;
+  --radius-pill: 9999px;
+  --radius-button: 24px;
+
+  /* Entrance timeline — cinematic */
+  --intro-hero-duration: 2.4s;
+  --intro-header-delay: 1.15s;
+  --intro-header-duration: 1.15s;
+  --intro-title-delay: 1.7s;
+  --intro-title-stagger: 0.2s;
+  --intro-title-duration: 1s;
+  --intro-bottom-delay: 2.7s;
+  --intro-bottom-duration: 1.2s;
+  --intro-ease: cubic-bezier(0.16, 1, 0.3, 1);
+  --intro-ease-soft: cubic-bezier(0.05, 0.7, 0.1, 1);
+  --reveal-duration: 1.15s;
+  --reveal-ease: cubic-bezier(0.16, 1, 0.3, 1);
+}

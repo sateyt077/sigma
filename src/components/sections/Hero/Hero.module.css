@@ -1,0 +1,242 @@
+.hero {
+  position: relative;
+  width: 100%;
+  min-height: var(--hero-height);
+  overflow: hidden;
+  background: var(--color-bg);
+}
+
+.background {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.backgroundImage {
+  height: var(--hero-height);
+  width: auto;
+  max-width: none;
+  object-fit: cover;
+  object-position: center;
+  opacity: 0;
+  transform: scale(1.08);
+  filter: blur(12px);
+  transform-origin: center center;
+  will-change: opacity, transform, filter;
+  animation: heroImageIn var(--intro-hero-duration) var(--intro-ease-soft)
+    forwards;
+}
+
+.backgroundGradient {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 82.391%,
+    #010101 100%
+  );
+  opacity: 0;
+  animation: fadeIn var(--intro-hero-duration) var(--intro-ease-soft) forwards;
+}
+
+.inner {
+  position: relative;
+  z-index: 1;
+  width: var(--page-width);
+  max-width: 100%;
+  min-height: var(--hero-height);
+  margin: 0 auto;
+}
+
+.content {
+  position: relative;
+  width: var(--content-width);
+  height: 726px;
+  margin: 142px auto 0;
+}
+
+.heading {
+  display: flex;
+  flex-direction: column;
+  width: 351px;
+  font-family: var(--font-display);
+  font-size: var(--font-size-hero);
+  font-weight: 500;
+  line-height: 51px;
+  letter-spacing: -1.92px;
+  text-transform: capitalize;
+  color: var(--color-white);
+  font-synthesis: none;
+}
+
+.headingLine {
+  display: block;
+  white-space: nowrap;
+  opacity: 0;
+  transform: translate3d(0, 40px, 0);
+  filter: blur(8px);
+  will-change: opacity, transform, filter;
+  animation: titleLineIn var(--intro-title-duration) var(--intro-ease) forwards;
+  animation-delay: calc(
+    var(--intro-title-delay) + var(--line-index, 0) * var(--intro-title-stagger)
+  );
+}
+
+.description {
+  position: absolute;
+  left: 0;
+  top: 643px;
+  width: 366px;
+  font-family: var(--font-display);
+  font-size: var(--font-size-body);
+  font-weight: 300;
+  line-height: normal;
+  letter-spacing: -0.96px;
+  color: var(--color-white);
+  font-synthesis: none;
+  opacity: 0;
+  transform: translate3d(0, 48px, 0);
+  filter: blur(6px);
+  will-change: opacity, transform, filter;
+  animation: fadeUpSoft var(--intro-bottom-duration) var(--intro-ease) forwards;
+  animation-delay: var(--intro-bottom-delay);
+}
+
+.directions {
+  position: absolute;
+  right: 0;
+  top: 575px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 299px;
+  opacity: 0;
+  transform: translate3d(0, 48px, 0);
+  filter: blur(6px);
+  will-change: opacity, transform, filter;
+  animation: fadeUp var(--intro-bottom-duration) var(--intro-ease) forwards;
+  animation-delay: calc(var(--intro-bottom-delay) + 0.18s);
+}
+
+.directionsInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  color: var(--color-white);
+}
+
+.directionsLabel {
+  font-family: var(--font-display);
+  font-size: var(--font-size-body);
+  font-weight: 300;
+  letter-spacing: -0.96px;
+  line-height: normal;
+  opacity: 0.7;
+  font-synthesis: none;
+}
+
+.directionsValue {
+  font-family: var(--font-display);
+  font-size: var(--font-size-hero);
+  font-weight: 500;
+  letter-spacing: -1.92px;
+  line-height: normal;
+  font-synthesis: none;
+}
+
+.directionsActions {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  width: 100%;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes heroImageIn {
+  0% {
+    opacity: 0;
+    transform: scale(1.08);
+    filter: blur(12px);
+  }
+  55% {
+    opacity: 0.85;
+    filter: blur(2px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+    filter: blur(0);
+  }
+}
+
+@keyframes titleLineIn {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 40px, 0);
+    filter: blur(8px);
+  }
+  60% {
+    opacity: 1;
+    filter: blur(0);
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+    filter: blur(0);
+  }
+}
+
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 48px, 0);
+    filter: blur(6px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+    filter: blur(0);
+  }
+}
+
+@keyframes fadeUpSoft {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 48px, 0);
+    filter: blur(6px);
+  }
+  100% {
+    opacity: 0.7;
+    transform: translate3d(0, 0, 0);
+    filter: blur(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .backgroundImage,
+  .backgroundGradient,
+  .headingLine,
+  .description,
+  .directions {
+    opacity: 1;
+    transform: none;
+    filter: none;
+    animation: none;
+    will-change: auto;
+  }
+
+  .description {
+    opacity: 0.7;
+  }
+}
